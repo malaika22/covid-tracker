@@ -4,10 +4,8 @@ import Cards from './components/Cards/Cards';
 import CovidChart from './components/Chart/Chart';
 import CountryPicker from './components/CountryPicker/CountryPicker'
 import styles from './App.module.css';
-import {fetchCountryData} from './api/index'
+import {fetchCountryData, fetchData} from './api/index';
 
-
-const  url = "https://covid19.mathdro.id/api";
 
 class App extends Component {
   
@@ -17,7 +15,7 @@ class App extends Component {
   }
 
   async componentDidMount(){  
-    const data= await Axios(url);
+    const data= await fetchData();
     this.setState({
       data
     })

@@ -18,3 +18,8 @@ export const fetchCountryData = async (country) =>{
     return changeableUrl;
 }
 
+
+export const fetchData= async () =>{
+    const data=await Axios(url)
+    return data;
+}
